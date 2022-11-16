@@ -107,7 +107,7 @@ Lo que haremos será simplemente poner la propiedad visibility en visible, y reg
   visibility: visible;
   opacity: 1;
 }
-#popupBody{
+#popupBody, #popupBody2, #popupBody3, #popupBody4, #popupBody5, #popupBody6{
   width: 46%;
   padding: 2%;
   border-radius: 15px;
