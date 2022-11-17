@@ -1,5 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-image: url(/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
 /*Menú*/
 .menu-ul {
@@ -50,20 +54,26 @@ body {
 }
 
 /*-----------EQUIPOS-------------*/
+#equipos-title {
+  color: white;
+}
 .wrapper-equipos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255);
     transition: 0.3s;
+    background-color: white;
+    opacity: 90%;
   }
   
   /* On mouse-over, add a deeper shadow */
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
   }
   
   /* Add some padding inside the card container */
@@ -71,14 +81,21 @@ body {
     padding: 2px 16px;
   }
 /*-----------JUEGOS-------------*/
+#juegos-title {
+  color: white;
+}
 .wrapper-juegos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 29.2%);
+    gap: 0;
+    padding-top: 110px;
+    transform-origin: 0 0;
+    transform: skewY(-5deg);
 }
 
 /*-----------CONTACTO-------------*/
 .contacto {
-    background-image: url(/img/contacto-fondo.jpg);
+    
     color: white;
 }
 
@@ -127,4 +144,25 @@ Lo que haremos será simplemente poner la propiedad visibility en visible, y reg
   font-weight: bold;
   text-decoration: none;
   color: #464B5F;
+}
+
+.tooltip {
+  position: static;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 29.2%;
+  background-color: #9357B7;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* tooltip position*/
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
